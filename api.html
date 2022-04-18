@@ -1,21 +1,23 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="/css/api.css">
-     <title>Document</title>
- </head>
+<!DOCTYPE html>
+<html lang="en">
 
- <body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="/css/api.css">
+    <title>Document</title>
+</head>
 
- <div class="dados-usd">
+<body>
+
+    <div class="dados-usd">
         <h2 class="dadosusd">Dados USD/BRL</h2>
         <p><span class="cor-verde">Nome: </span><span class="name-usd"></span></p>
         <p><span class="cor-verde">Alta: </span><span class="alta-usd"></span></span></p>
         <p><span class="cor-verde">Baixa: </span><span class="baixa-usd"></span></p>
-        
+
     </div>
 
     <div class="dados-eur">
@@ -26,26 +28,27 @@
     </div>
 
 
-<script>
-    let nameusd = document.querySelector('.name-usd');
-    let altausd = document.querySelector('.alta-usd');
-    let baixausd = document.querySelector('.baixa-usd');
+    <script>
+        let nameusd = document.querySelector('.name-usd');
+        let altausd = document.querySelector('.alta-usd');
+        let baixausd = document.querySelector('.baixa-usd');
 
-    let nameeur = document.querySelector('.name-eur');
-    let altaeur = document.querySelector('.alta-eur');
-    let baixaeur = document.querySelector('.baixa-eur');
+        let nameeur = document.querySelector('.name-eur');
+        let altaeur = document.querySelector('.alta-eur');
+        let baixaeur = document.querySelector('.baixa-eur');
 
-    (async () => {
-      let json = await axios.get('https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL');
-        nameusd.innerHTML = json.data.USD-BRL.name;
-        altausd.innerHTML = json.data.USD-BRL.high;
-        baixausd.innerHTML = json.data.USD-BRL.low;
+        (async () => {
+            let json = await axios.get('https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL');
+            nameusd.innerHTML = json.data.USD - BRL.name;
+            altausd.innerHTML = json.data.USD - BRL.high;
+            baixausd.innerHTML = json.data.USD - BRL.low;
 
-        nameeur.innerHTML = json.data.BRL.name;
-        altaeur.innerHTML = json.data.BRL.high;
-        baixaeur.innerHTML = json.data.BRL.low;
-    })(); 
+            nameeur.innerHTML = json.data.BRL.name;
+            altaeur.innerHTML = json.data.BRL.high;
+            baixaeur.innerHTML = json.data.BRL.low;
+        })();
 
-</script>
- </body>
-      </html>
+    </script>
+</body>
+
+</html>
