@@ -37,13 +37,13 @@
 
     (async () => {
       let json = await axios.get('https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL');
-        nameusd.innerHTML = json.data.USD.name;
-        altausd.innerHTML = json.data.USD.high;
-        baixausd.innerHTML = json.data.USD.low;
+        nameusd.innerHTML = json.data.USDBRL.name;
+        altausd.innerHTML = json.data.USDBRL.high;
+        baixausd.innerHTML = json.data.USDBRL.low;
 
-        nameeur.innerHTML = json.data.EUR.name;
-        altaeur.innerHTML = json.data.EUR.high;
-        baixaeur.innerHTML = json.data.EUR.low;
+        nameeur.innerHTML = json.data.EURBRL.name;
+        altaeur.innerHTML = json.data.EURBRL.high;
+        baixaeur.innerHTML = json.data.EURBRL.low;
     })(); 
 
 </script>
