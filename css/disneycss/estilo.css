@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: "Avenir Roman";
   src: url("avenir-roman.ttf") format("truetype");
@@ -56,8 +55,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 100px) and (max-width: 1023px)  
-{
+@media only screen and (min-width: 100px) and (max-width: 1023px) {
   .entrar {
     font-family: "avenir-roman", sans-serif;
     font-size: 13px;
@@ -224,7 +222,8 @@ body {
   .assine {
     color: #f9f9f9;
     font-family: "Avenir Roman", sans-serif;
-    background: #6421ff;;
+    background: #6421ff;
+    ;
     width: 640px;
     height: 68px;
     cursor: pointer;
@@ -239,7 +238,8 @@ body {
   .assine {
     color: #f9f9f9;
     font-family: "Avenir Roman", sans-serif;
-    background: #6421ff;;
+    background: #6421ff;
+    ;
     width: 600px;
     height: 68px;
     cursor: pointer;
@@ -254,7 +254,8 @@ body {
   .assine {
     color: #f9f9f9;
     font-family: "Avenir Roman", sans-serif;
-    background: #6421ff;;
+    background: #6421ff;
+    ;
     width: 600px;
     height: 68px;
     cursor: pointer;
@@ -269,7 +270,8 @@ body {
   .assine {
     color: #f9f9f9;
     font-family: "Avenir Roman", sans-serif;
-    background: #6421ff;;
+    background: #6421ff;
+    ;
     width: 330px;
     height: 50px;
     cursor: pointer;
@@ -284,7 +286,8 @@ body {
   .assine {
     color: #f9f9f9;
     font-family: "Avenir Roman", sans-serif;
-    background: #6421ff;;
+    background: #6421ff;
+    ;
     width: 320px;
     height: 50px;
     cursor: pointer;
@@ -299,7 +302,8 @@ body {
   .assine {
     color: #f9f9f9;
     font-family: "Avenir Roman", sans-serif;
-    background: #6421ff;;
+    background: #6421ff;
+    ;
     width: 290px;
     height: 50px;
     cursor: pointer;
@@ -385,7 +389,7 @@ body {
     margin-left: 280px;
     margin-top: -20px;
     display: block;
-    
+
   }
 }
 
@@ -445,7 +449,7 @@ body {
     padding-top: 0px;
     text-decoration: underline;
     display: flex;
-    
+
   }
 }
 
@@ -463,7 +467,7 @@ body {
   background-color: transparent;
   border: none;
   padding-top: 20px;
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 740px) {
@@ -504,6 +508,110 @@ body {
     text-decoration: underline;
     display: flex;
     margin-left: -190px;
-    text-indent: 13em;    
+    text-indent: 13em;
   }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  text-align: justify;
+}
+
+/*
+.content {
+  margin: 0 auto;
+  max-width: 900px;
+  background-color: #eee;
+  padding: 10px;
+}
+*/
+
+.btn {
+  background-color: rgb(33, 156, 70);
+  padding: 5px 10px 5px 10px;
+  border: 2px solid rgb(4, 92, 30);
+  cursor: pointer;
+  transition: background .3s;
+  border-radius: 5px;
+  color: #FFF;
+}
+
+.btn:hover {
+  background-color: rgb(4, 92, 30);
+}
+
+.btn:active {
+  background-color: rgb(129, 255, 166);
+  color: rgb(4, 92, 30);
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, .85);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+.modal-content {
+  margin: 0 auto;
+  margin-top: 3%;
+  max-width: 550px;
+  background-color: #eee;
+  padding: 0;
+  box-shadow: 0 0 2px #fff;
+}
+
+.modal-header h1 {
+  font-weight: bold;
+  text-align: center;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+  padding: 10px;
+}
+
+.modal-header {
+  background-color: #ccc;
+}
+
+.modal-footer {
+  background-color: #ccc;
+}
+
+.modal2 {
+  background-color: rgba(0, 0, 0, .85);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+.modal2-content {
+  margin: 0 auto;
+  margin-top: 3%;
+  max-width: 550px;
+  background-color: #eee;
+  padding: 0;
+  box-shadow: 0 0 2px #fff;
+}
+
+.modal-header h1 {
+  font-weight: bold;
+  text-align: center;
+}
+
+.modal2-body {
+  padding: 10px;
 }
