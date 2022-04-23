@@ -567,6 +567,7 @@ p {
   background-color: #eee;
   padding: 0;
   box-shadow: 0 0 2px #fff;
+  padding: 1px;
 }
 
 .modal-header h1 {
@@ -602,9 +603,10 @@ p {
   margin: 0 auto;
   margin-top: 3%;
   max-width: 550px;
-  background-color: #eee;
+  background: linear-gradient(120deg, #000000, #ce0909, #000000);
   padding: 0;
   box-shadow: 0 0 2px #fff;
+  padding: 2px;
 }
 
 .modal-header h1 {

@@ -41,8 +41,12 @@ function getmoedas() {
     let altaeur = document.querySelector('.alta-eur');
     let baixaeur = document.querySelector('.baixa-eur');
 
+    let namebtc = document.querySelector('.name-btc');
+    let altabtc = document.querySelector('.alta-btc');
+    let baixabtc = document.querySelector('.baixa-btc');
+
     (async () => {
-        let json = await axios.get('https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL');
+        let json = await axios.get('https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL');
         nameusd.innerHTML = json.data.USDBRL.name;
         altausd.innerHTML = json.data.USDBRL.high;
         baixausd.innerHTML = json.data.USDBRL.low;
@@ -50,5 +54,9 @@ function getmoedas() {
         nameeur.innerHTML = json.data.EURBRL.name;
         altaeur.innerHTML = json.data.EURBRL.high;
         baixaeur.innerHTML = json.data.EURBRL.low;
+
+        namebtc.innerHTML = json.data.BTCBRL.name;
+        altabtc.innerHTML = json.data.BTCBRL.high;
+        baixabtc.innerHTML = json.data.BTCBRL.low;
     })();
 }
