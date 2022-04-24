@@ -12,12 +12,10 @@ body {
   padding: 15px;
   height: 70vh;
   /*background: linear-gradient(120deg, #0c1dd5, #090909, #0c1dd5);*/
-  background: transparent
+  background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  
 }
 
 .login-container {
@@ -32,10 +30,6 @@ body {
   align-items: center;
 }
 
-.login-title {
-  margin-bottom: 32px;
-  color: #303030;
-}
 
 .login-form {
   width: 100%;
