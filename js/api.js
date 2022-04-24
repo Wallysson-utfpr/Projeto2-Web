@@ -1,3 +1,4 @@
+
 const init = () => {
     const inputEmail = document.querySelector('input[type = "email"]');
     const inputPassword = document.querySelector('input[type = "password"]');
@@ -33,6 +34,10 @@ const init = () => {
 window.onload = init;
 
 function getmoedas() {
+
+    
+    //bnt = document.querySelector('.btn');
+    //bnt.addEventListener("click", );
     let nameusd = document.querySelector('.name-usd');
     let altausd = document.querySelector('.alta-usd');
     let baixausd = document.querySelector('.baixa-usd');
@@ -47,6 +52,7 @@ function getmoedas() {
 
     (async () => {
         let json = await axios.get('https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL');
+        
         nameusd.innerHTML = json.data.USDBRL.name;
         altausd.innerHTML = json.data.USDBRL.high;
         baixausd.innerHTML = json.data.USDBRL.low;
@@ -59,4 +65,9 @@ function getmoedas() {
         altabtc.innerHTML = json.data.BTCBRL.high;
         baixabtc.innerHTML = json.data.BTCBRL.low;
     })();
+}
+
+function showHide(id) {
+    let conteudo = document.querySelector(id);
+    conteudo.classList.toggle('ativo');
 }

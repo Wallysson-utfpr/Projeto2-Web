@@ -1,6 +1,5 @@
 .dados-usd {
-  background: linear-gradient(120deg, #6e0446, #e924b8, #6e0446);
-  width: 50vh;
+color: white;
 }
 
 .dadosusd {
@@ -10,31 +9,32 @@
 }
 .name-usd {
   font-family: sans-serif;
-  font-size: 10pt;
+  font-size: 13pt;
   color: white;
+
 }
 
 .alta-usd {
   font-family: sans-serif;
-  font-size: 10pt;
+  font-size: 13pt;
   color: white;
 }
 
 .baixa-usd {
   font-family: sans-serif;
-  font-size: 10pt;
+  font-size: 13pt;
   color: white;
 }
 
 .cor-verde {
   font-family: sans-serif;
-  font-size: 10pt;
+  font-size: 13pt;
   color: rgb(27, 209, 3);
 }
 
 .dados-eur {
-  background: linear-gradient(120deg, #6e0446, #e924b8, #6e0446);
-  width: 50vh;
+  color: white;
+  text-align: c;
 }
 
 .dadoseur {
@@ -45,25 +45,24 @@
 
 .name-eur {
   font-family: sans-serif;
-  font-size: 10pt;
+  font-size: 13pt;
   color: white;
 }
 
 .alta-eur {
   font-family: sans-serif;
-  font-size: 10pt;
+  font-size: 13pt;
   color: white;
 }
 
 .baixa-eur {
   font-family: sans-serif;
-  font-size: 10pt;
+  font-size: 13pt;
   color: white;
 }
 
 .dados-btc {
-  background: linear-gradient(120deg, #6e0446, #e924b8, #6e0446);
-  width: 50vh;
+  color: white;
 }
 
 .dadosbtc {
@@ -75,18 +74,37 @@
 
 .name-btc {
   font-family: sans-serif;
-  font-size: 10pt;
+  font-size: 13pt;
   color: white;
 }
 
 .alta-btc{
   font-family: sans-serif;
-  font-size: 10pt;
+  font-size: 13pt;
   color: white;
 }
 
 .baixa-btc {
   font-family: sans-serif;
-  font-size: 10pt;
+  font-size: 13pt;
   color: white;
+}
+
+
+section.container {
+  padding: 20px;
+}
+
+section.container div.carrega-dados-moeda{
+  height: 0;
+  overflow: hidden;
+  padding: 10px;
+}
+
+section.container div.carrega-dados-moeda.ativo {
+  height: 100px;
+}
+
+h2{
+  cursor: pointer;
 }
