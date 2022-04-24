@@ -7,11 +7,17 @@ body {
 */
 
 .login {
+  /*max-height: 470px;
+  width: 300px;*/
+  padding: 15px;
   height: 70vh;
-  background: linear-gradient(120deg, #0c1dd5, #090909, #0c1dd5);
+  /*background: linear-gradient(120deg, #0c1dd5, #090909, #0c1dd5);*/
+  background: transparent
   display: flex;
   justify-content: center;
   align-items: center;
+
+  
 }
 
 .login-container {
