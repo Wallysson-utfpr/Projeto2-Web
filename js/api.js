@@ -21,9 +21,12 @@ const init = () => {
             }).then((data) => {
                 console.log(data);
 
-                if (data.token === 'QpwL5tke4Pnpja7X4') {
+
+                localStorage.setItem("token", data.token);
+
+                if (localStorage.token !== "undefined") {
                     openModal('dv-modal2');
-                    getmoedas();
+
                 }
             })
 
@@ -35,9 +38,6 @@ window.onload = init;
 
 function getmoedas() {
 
-    
-    //bnt = document.querySelector('.btn');
-    //bnt.addEventListener("click", );
     let nameusd = document.querySelector('.name-usd');
     let altausd = document.querySelector('.alta-usd');
     let baixausd = document.querySelector('.baixa-usd');
@@ -50,9 +50,24 @@ function getmoedas() {
     let altabtc = document.querySelector('.alta-btc');
     let baixabtc = document.querySelector('.baixa-btc');
 
+    let nameescolha = document.querySelector('.name-escolha');
+    let altaescolha = document.querySelector('.alta-escolha');
+    let baixaescolha = document.querySelector('.baixa-escolha');
+
+
+
+
     (async () => {
-        let json = await axios.get('https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL');
-        
+
+        let escolhatxt = document.querySelector('.escolha');
+        var teste = escolhatxt.value;
+        var teste2 = teste;
+        let json = await axios.get('https://economia.awesomeapi.com.br/last/' + teste);
+
+
+        //let url = 'https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL, ' = escolhatxt;
+        //let json = await axios.get(url);
+        /*
         nameusd.innerHTML = json.data.USDBRL.name;
         altausd.innerHTML = json.data.USDBRL.high;
         baixausd.innerHTML = json.data.USDBRL.low;
@@ -64,10 +79,30 @@ function getmoedas() {
         namebtc.innerHTML = json.data.BTCBRL.name;
         altabtc.innerHTML = json.data.BTCBRL.high;
         baixabtc.innerHTML = json.data.BTCBRL.low;
+        */
+        teste2 = teste.replace("-", "");
+
+        nameescolha.innerHTML = json.data[teste2].name;
+        altaescolha.innerHTML = json.data[teste2].high;
+        baixaescolha.innerHTML = json.data[teste2].low;
+
+
     })();
 }
 
 function showHide(id) {
+
     let conteudo = document.querySelector(id);
     conteudo.classList.toggle('ativo');
+
 }
+
+/*
+const inite = () => {
+    const escolhasubmit = document.querySelector('.escolha-submit');
+    escolhasubmit.addEventListener("click", (event) => {
+        getmoedas();
+    })
+}
+window.onload = inite;
+*/
