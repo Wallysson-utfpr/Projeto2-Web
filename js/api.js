@@ -106,3 +106,15 @@ const inite = () => {
 }
 window.onload = inite;
 */
+
+function logout() {
+    localStorage.setItem("token", "undefined");
+}
+function recarregar() {
+
+    if (localStorage.token !== "undefined") {
+        openModal('dv-modal2');
+
+    }
+
+}
