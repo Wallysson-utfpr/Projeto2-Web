@@ -27,11 +27,32 @@
   color: white;
 }
 
-.cor-verde {
+.cor-coluna1 {
   font-family: sans-serif;
   font-size: 13pt;
-  color: rgb(27, 209, 3);
+  color: yellow;
 }
+
+.name-escolha {
+  font-family: sans-serif;
+  font-size: 13pt;
+  color: white;
+}
+
+.alta-escolha {
+  font-family: sans-serif;
+  font-size: 13pt;
+  color: white;
+}
+
+.baixa-escolha {
+  font-family: sans-serif;
+  font-size: 13pt;
+  color: white;
+}
+
+
+
 
 .dados-eur {
   color: white;
@@ -126,4 +147,9 @@ h2 {
   height: 50%;
   width: 20%;
   background-color: white;
+}
+
+.modal2-titulo{
+  color: white;
+
 }
