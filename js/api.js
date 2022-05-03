@@ -97,15 +97,6 @@ function showHide(id) {
 
 }
 
-/*
-const inite = () => {
-    const escolhasubmit = document.querySelector('.escolha-submit');
-    escolhasubmit.addEventListener("click", (event) => {
-        getmoedas();
-    })
-}
-window.onload = inite;
-*/
 
 function logout() {
     localStorage.setItem("token", "undefined");
@@ -117,4 +108,34 @@ function recarregar() {
 
     }
 
+}
+
+function verificatxt() {
+    
+    var lista = document.querySelector("ul"),
+    input = document.querySelector("#teste");
+
+    input.addEventListener("keyup", function () {
+        var palavra = input.value;
+        lista.innerHTML = "";
+            if (palavra.length < 1) {
+                var li = document.createElement("li");
+                li.innerHTML = "Não pode ser vazio...";
+                lista.appendChild(li).style.color = "red";
+
+            } else if (palavra.length >= 1 && palavra.length  <= 6) {
+                var li = document.createElement("li");
+                li.innerHTML = "Formato esperado {XXX-XXX}";
+                lista.appendChild(li).style.color = "yellow";
+
+            } else {
+                var li = document.createElement("li");
+                li.innerHTML = "OK!";
+                lista.appendChild(li).style.color = "green";
+
+                var li = document.createElement("li");
+                li.innerHTML = palavra;
+                lista.appendChild(li).style.color = "green";
+            }
+    });
 }
