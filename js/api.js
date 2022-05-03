@@ -125,10 +125,23 @@ function verificatxt() {
 
             } else if (palavra.length >= 1 && palavra.length  <= 6) {
                 var li = document.createElement("li");
-                li.innerHTML = "Formato esperado {XXX-XXX}";
+                li.innerHTML = "Tá quase lá..";
                 lista.appendChild(li).style.color = "yellow";
 
-            } else {
+                var li = document.createElement("li");
+                li.innerHTML = "Formato esperado {XXX-XXX}";
+                lista.appendChild(li).style.color = "yellow";
+            
+            } else if (palavra.length > 7) {
+                var li = document.createElement("li");
+                li.innerHTML = "Ops! Tem mais digito que o permitido";
+                lista.appendChild(li).style.color = "yellow";
+
+                var li = document.createElement("li");
+                li.innerHTML = "O formato esperado {XXX-XXX}";
+                lista.appendChild(li).style.color = "yellow";
+
+            } else if (palavra.length == 7) {
                 var li = document.createElement("li");
                 li.innerHTML = "OK!";
                 lista.appendChild(li).style.color = "green";
