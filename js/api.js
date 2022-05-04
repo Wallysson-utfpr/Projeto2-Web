@@ -48,17 +48,21 @@ function getmoedas() {
         var teste = escolhatxt.value;
         var teste2 = teste;
         var lista = document.querySelector("ul"),
-            input = document.querySelector("#teste");
+        //input = document.querySelector("#teste");
 
         (async () => {
 
+            // chamada da api para obter a lista completa de moedas
             let listamoedas = await axios.get('https://economia.awesomeapi.com.br/json/available');
 
+            // teste para validar se a combinação de moedas escolhidas faz parte das
+            // moedas presentes na api
             if (!listamoedas.data[teste]) {
                 var li = document.createElement("li");
                 li.innerHTML = "Ops! Moeda inexistente";
                 lista.appendChild(li).style.color = "yellow";
             } else {
+                // chamada da api para obter a cotação das moedas selecionadas
                 let json = await axios.get('https://economia.awesomeapi.com.br/last/' + teste);
 
                 teste2 = teste.replace("-", "");
