@@ -1,3 +1,4 @@
+
 const init = () => {
     const inputEmail = document.querySelector('input[type = "email"]');
     const inputPassword = document.querySelector('input[type = "password"]');
@@ -96,6 +97,7 @@ function recarregar() {
 
 }
 
+// função de verificação dos dados entrados (formato e comprimento).
 function verificatxt() {
 
     var lista = document.querySelector("ul"),
