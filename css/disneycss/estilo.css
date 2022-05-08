@@ -343,12 +343,14 @@ body {
   }
 }
 
+
 @media screen and (max-width: 1760px) {
   .small-text1 {
     color: #f9f9f9;
     margin-left: -100px;
   }
 }
+
 
 @media screen and (max-width: 1500px) {
   .small-text1 {
@@ -357,6 +359,7 @@ body {
   }
 }
 
+
 @media screen and (max-width: 1023px) {
   .small-text1 {
     color: #f9f9f9;
@@ -364,6 +367,7 @@ body {
   }
 }
 
+
 @media screen and (max-width: 740px) {
   .small-text1 {
     color: #f9f9f9;
@@ -373,6 +377,7 @@ body {
   }
 }
 
+
 @media screen and (max-width: 360px) {
   .small-text1 {
     color: #f9f9f9;
@@ -381,6 +386,7 @@ body {
     display: block;
   }
 }
+
 
 @media screen and (max-width: 740px) {
   .small-text2 {
@@ -392,6 +398,7 @@ body {
   }
 }
 
+
 @media screen and (max-width: 360px) {
   .small-text2 {
     color: #f9f9f9;
@@ -401,6 +408,7 @@ body {
     display: flex;
   }
 }
+
 
 @media screen and (max-width: 740px) {
   .small-text3 {
@@ -411,6 +419,7 @@ body {
 
   }
 }
+
 
 @media screen and (max-width: 370px) {
   .small-text3 {
@@ -421,6 +430,7 @@ body {
 
   }
 }
+
 
 .link {
   font-family: "Avenir Roman", sans-serif;
@@ -439,6 +449,7 @@ body {
   padding-left: 35px;
   text-decoration: underline;
 }
+
 
 @media screen and (max-width: 740px) {
   .link {
@@ -461,6 +472,7 @@ body {
   }
 }
 
+
 @media screen and (max-width: 360px) {
   .link {
     font-family: "Avenir Roman", sans-serif;
@@ -482,6 +494,7 @@ body {
   }
 }
 
+
 .link1 {
   font-family: "Avenir Roman", sans-serif;
   cursor: pointer;
@@ -498,6 +511,7 @@ body {
   padding-top: 20px;
   text-decoration: underline;
 }
+
 
 @media screen and (max-width: 740px) {
   .link1 {
@@ -518,6 +532,7 @@ body {
     display: flex;
   }
 }
+
 
 @media screen and (max-width: 360px) {
   .link1 {
@@ -541,24 +556,19 @@ body {
   }
 }
 
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 
 * {
   font-family: 'Open Sans', sans-serif;
 }
 
+
 p {
   text-align: justify;
 }
 
-/*
-.content {
-  margin: 0 auto;
-  max-width: 900px;
-  background-color: #eee;
-  padding: 10px;
-}
-*/
 
 .btn {
   background-color: rgb(33, 156, 70);
@@ -570,14 +580,17 @@ p {
   color: #FFF;
 }
 
+
 .btn:hover {
   background-color: rgb(4, 92, 30);
 }
+
 
 .btn:active {
   background-color: rgb(129, 255, 166);
   color: rgb(4, 92, 30);
 }
+
 
 .modal {
   background-color: rgba(0, 0, 0, .85);
@@ -588,6 +601,7 @@ p {
   height: 100vh;
   display: none;
 }
+
 
 .modal-content {
   margin: 0 auto;
@@ -600,10 +614,12 @@ p {
   padding: 1px;
 }
 
+
 .modal-header h1 {
   font-weight: bold;
   text-align: center;
 }
+
 
 .modal-header,
 .modal-body,
@@ -611,13 +627,16 @@ p {
   padding: 10px;
 }
 
+
 .modal-header {
   background-color: #ccc;
 }
 
+
 .modal-footer {
   background-color: #ccc;
 }
+
 
 .modal2 {
   background-color: rgba(0, 0, 0, .85);
@@ -641,11 +660,16 @@ p {
   padding: 2px;
 }
 
+
 .modal-header h1 {
   font-weight: bold;
   text-align: center;
 }
 
+
 .modal2-body {
   padding: 10px;
 }
+
+
+
