@@ -3,6 +3,7 @@
   src: url("avenir-roman.ttf") format("truetype");
 }
 
+
 body {
   padding-top: 70px;
   background-image: url("imagenscss/original.jpg");
@@ -11,6 +12,7 @@ body {
   height: 100vh;
   background-size: 100%;
 }
+
 
 @media screen and (max-width: 1023px) {
   body {
@@ -23,6 +25,7 @@ body {
   }
 }
 
+
 @media only screen and (min-width: 1024px) and (max-width: 1700px) {
   .botao-entrar {
     display: flex;
@@ -31,6 +34,7 @@ body {
     margin-right: 20px;
   }
 }
+
 
 @media only screen and (min-width: 1024px) and (max-width: 1700px) {
   .entrar {
@@ -46,6 +50,7 @@ body {
   }
 }
 
+
 @media only screen and (min-width: 100px) and (max-width: 1023px) {
   .botao-entrar {
     display: flex;
@@ -54,6 +59,7 @@ body {
     margin-right: 10px;
   }
 }
+
 
 @media only screen and (min-width: 100px) and (max-width: 1023px) {
   .entrar {
@@ -69,14 +75,17 @@ body {
   }
 }
 
+
 .container-hero {
   margin-top: 100px;
 }
+
 
 .hero {
   background-repeat: no-repeat;
   margin-left: 200px;
 }
+
 
 @media only screen and (min-width: 1024px) and (max-width: 1700px) {
   .titulo {
@@ -89,6 +98,7 @@ body {
     color: #f9f9f9;
   }
 }
+
 
 @media screen and (max-width: 1023px) {
   .titulo {
@@ -104,6 +114,7 @@ body {
   }
 }
 
+
 @media screen and (max-width: 740px) {
   .titulo {
     font-family: "Avenir Roman", sans-serif;
@@ -118,6 +129,7 @@ body {
   }
 }
 
+
 @media screen and (max-width: 360px) {
   .titulo {
     font-family: "Avenir Roman", sans-serif;
@@ -130,6 +142,7 @@ body {
     text-align: center;
   }
 }
+
 
 @media screen and (max-width: 320px) {
   .titulo {
@@ -144,9 +157,11 @@ body {
   }
 }
 
+
 .logo {
   max-width: 320px;
 }
+
 
 @media screen and (max-width: 1023px) {
   .logo {
@@ -154,6 +169,7 @@ body {
     margin-left: 180px;
   }
 }
+
 
 @media screen and (max-width: 740px) {
   .logo {
@@ -165,6 +181,7 @@ body {
   }
 }
 
+
 @media screen and (max-width: 360px) {
   .logo {
     max-width: 1000px;
@@ -175,6 +192,7 @@ body {
   }
 }
 
+
 @media screen and (max-width: 1760px) {
   .botao-assine {
     padding-top: 20px;
@@ -183,12 +201,14 @@ body {
   }
 }
 
+
 @media screen and (max-width: 1500px) {
   .botao-assine {
     padding-top: 20px;
     margin-left: -155px;
   }
 }
+
 
 @media screen and (max-width: 1023px) {
   .botao-assine {
@@ -197,12 +217,14 @@ body {
   }
 }
 
+
 @media screen and (max-width: 740px) {
   .botao-assine {
     margin-left: -182px;
     display: flex;
   }
 }
+
 
 @media screen and (max-width: 360px) {
   .botao-assine {
@@ -211,12 +233,14 @@ body {
   }
 }
 
+
 @media screen and (max-width: 320px) {
   .botao-assine {
     margin-left: -192px;
     display: flex;
   }
 }
+
 
 @media screen and (max-width: 1760px) {
   .assine {
@@ -234,6 +258,7 @@ body {
   }
 }
 
+
 @media screen and (max-width: 1500px) {
   .assine {
     color: #f9f9f9;
@@ -249,6 +274,7 @@ body {
     border: 8px solid transparent;
   }
 }
+
 
 @media screen and (max-width: 1023px) {
   .assine {
@@ -266,6 +292,7 @@ body {
   }
 }
 
+
 @media screen and (max-width: 740px) {
   .assine {
     color: #f9f9f9;
@@ -282,6 +309,7 @@ body {
   }
 }
 
+
 @media screen and (max-width: 360px) {
   .assine {
     color: #f9f9f9;
@@ -297,6 +325,7 @@ body {
     border: 8px solid transparent;
   }
 }
+
 
 @media screen and (max-width: 320px) {
   .assine {

@@ -3,9 +3,56 @@ const init = () => {
     const inputEmail = document.querySelector('input[type = "email"]');
     const inputPassword = document.querySelector('input[type = "password"]');
     const submitButton = document.querySelector('.login-submit');
+    
+    document.querySelector(".login-submit").disabled = true;
 
+    
+    inputPassword.addEventListener("keyup", function (){
+         var avisoSenha = document.querySelector("ul1"),
+    //input = document.querySelector("#teste");
+
+    //avisoSenha.addEventListener("keyup", function () {
+    palavra = inputPassword.value;
+    avisoSenha.innerHTML = "";
+    if (palavra.length < 4) {
+    
+        //alert("senha");
+        var li = document.createElement("li");
+        li.innerHTML = "Senha precisa ser maior do que três caracteres!";
+        avisoSenha.appendChild(li).style.color = "red";
+        //openModal('dv-modal');
+        //document.submitButton.disabled = true;
+
+    
+    }else{
+        var li = document.createElement("li");
+        li.innerHTML = "Senha OK";
+        avisoSenha.appendChild(li).style.color = "green";
+    //}
+    //});
+    
+    document.querySelector(".login-submit").disabled = false;
+    
     if (submitButton) {
         submitButton.addEventListener('click', (event) => {
+            
+        ////var avisoSenha = document.querySelector("ul"),
+        //input = document.querySelector("#teste");
+
+        //aviso.addEventListener("keyup", function () {
+        ////palavra = inputPassword.value;
+        ////avisoSenha.innerHTML = "";
+        ////if (palavra.length < 4) {
+        
+        ////    alert("senha");
+        ////    var li = document.createElement("li");
+        ////    li.innerHTML = "Senha precisa ser maior do que três caracteres!";
+        ////    avisoSenha.appendChild(li).style.color = "red";
+            //openModal('dv-modal');
+            
+
+        ////}else{
+            
             event.preventDefault();
             fetch('https://reqres.in/api/login', {
                 method: 'POST',
@@ -29,9 +76,15 @@ const init = () => {
 
                 }
             })
-
+        ////   }
         })
     }
+
+}
+    });
+    
+
+
 }
 
 window.onload = init;
@@ -48,9 +101,8 @@ function getmoedas() {
         let escolhatxt = document.querySelector('.escolha');
         var teste = escolhatxt.value;
         var teste2 = teste;
-        var lista = document.querySelector("ul"),
+        var lista = document.querySelector("ul");
         //input = document.querySelector("#teste");
-
         (async () => {
 
             // chamada da api para obter a lista completa de moedas
@@ -88,6 +140,7 @@ function showHide(id) {
 function logout() {
     localStorage.setItem("token", "undefined");
 }
+
 function recarregar() {
 
     if (localStorage.token !== "undefined") {
