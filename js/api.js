@@ -6,85 +6,50 @@ const init = () => {
     
     document.querySelector(".login-submit").disabled = true;
 
-    
     inputPassword.addEventListener("keyup", function (){
-         var avisoSenha = document.querySelector("ul1"),
-    //input = document.querySelector("#teste");
+    var avisoSenha = document.querySelector("ul1"),
 
-    //avisoSenha.addEventListener("keyup", function () {
     palavra = inputPassword.value;
     avisoSenha.innerHTML = "";
     if (palavra.length < 4) {
-    
-        //alert("senha");
         var li = document.createElement("li");
         li.innerHTML = "Senha precisa ser maior do que três caracteres!";
         avisoSenha.appendChild(li).style.color = "red";
-        //openModal('dv-modal');
-        //document.submitButton.disabled = true;
-
-    
-    }else{
+    }
+    else{
         var li = document.createElement("li");
         li.innerHTML = "Senha OK";
         avisoSenha.appendChild(li).style.color = "green";
-    //}
-    //});
+        document.querySelector(".login-submit").disabled = false;
     
-    document.querySelector(".login-submit").disabled = false;
-    
-    if (submitButton) {
-        submitButton.addEventListener('click', (event) => {
-            
-        ////var avisoSenha = document.querySelector("ul"),
-        //input = document.querySelector("#teste");
-
-        //aviso.addEventListener("keyup", function () {
-        ////palavra = inputPassword.value;
-        ////avisoSenha.innerHTML = "";
-        ////if (palavra.length < 4) {
-        
-        ////    alert("senha");
-        ////    var li = document.createElement("li");
-        ////    li.innerHTML = "Senha precisa ser maior do que três caracteres!";
-        ////    avisoSenha.appendChild(li).style.color = "red";
-            //openModal('dv-modal');
-            
-
-        ////}else{
-            
-            event.preventDefault();
-            fetch('https://reqres.in/api/login', {
-                method: 'POST',
-                headers: {
-                    'content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    email: inputEmail.value,
-                    password: inputPassword.value,
+        if (submitButton) {
+            submitButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                fetch('https://reqres.in/api/login', {
+                    method: 'POST',
+                    headers: {
+                        'content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        email: inputEmail.value,
+                        password: inputPassword.value,
+                    })
+                }).then((response) => {
+                    return response.json();
+                }).then((data) => {
+                    console.log(data);
+                    localStorage.setItem("token", data.token);
+                    if (localStorage.token !== "undefined") {
+                        openModal('dv-modal2');
+                    }
                 })
-            }).then((response) => {
-                return response.json();
-            }).then((data) => {
-                console.log(data);
-
-
-                localStorage.setItem("token", data.token);
-
-                if (localStorage.token !== "undefined") {
-                    openModal('dv-modal2');
-
-                }
             })
-        ////   }
-        })
+        }
     }
-
-}
-    });
+});
     
 
-
+    
 }
 
 window.onload = init;
